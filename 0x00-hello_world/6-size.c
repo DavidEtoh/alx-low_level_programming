@@ -1,6 +1,6 @@
 #include<stdio.h>
 /**
- *main - print the size of variuos type of c
+ *main - print the Size of variuos type of c
  *
  * Return: Always 0.
 */
