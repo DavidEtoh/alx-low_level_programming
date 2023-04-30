@@ -16,7 +16,7 @@ if (!new)
 return (NULL);
 
 new->n = n;
-new->news = NULL;
+new->next = NULL;
 
 if (*head == NULL)
 {
@@ -24,10 +24,10 @@ if (*head == NULL)
 return (new);
 }
 
-while (temp->news)
-temp = temp->news;
+while (temp->next)
+temp = temp->next;
 
-temp->news = new;
+temp->next = new;
 
 return (new);
 }

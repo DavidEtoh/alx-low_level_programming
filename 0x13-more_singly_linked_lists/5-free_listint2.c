@@ -13,7 +13,7 @@ return;
 
 while (*head)
 {
-temp = (*head)->news;
+temp = (*head)->next;
 free(*head);
 *head = temp;
 }

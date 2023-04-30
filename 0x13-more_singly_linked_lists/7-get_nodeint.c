@@ -13,7 +13,7 @@ listint_t *temp = head;
 
 while (temp && i < index)
 {
-temp = temp->news;
+temp = temp->next;
 i++;
 }
 

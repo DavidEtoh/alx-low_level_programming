@@ -23,7 +23,7 @@ int main(void)
         return (1);
     }
     new->n = 9;
-    new->news = head;
+    new->next = head;
     head = new;
     n = listint_len(head);
     printf("-> %lu elements\n", n);

@@ -10,7 +10,7 @@ listint_t *temp;
 
 while (head)
 {
-temp = head->news;
+temp = head->next;
 free(head);
 head = temp;
 }
