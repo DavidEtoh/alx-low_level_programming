@@ -2,9 +2,9 @@
 
 
 /**
- * print_listint - print all elements of a linked list
+ * print_listint - print all elements of a linked listint_t list
  * @h: The type of linked list listint_t to print
- * Return: number of nodes
+ * Return: number of nodes in the code
  */
 size_t print_listint(const listint_t *h)
 {
@@ -14,8 +14,7 @@ size_t print_listint(const listint_t *h)
 	{
 		printf("%d\n", h->n);
 		num++;
-		h = h->news;
+		h = h->next;
 	}
-
 	return (num);
 }
