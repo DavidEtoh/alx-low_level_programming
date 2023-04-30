@@ -16,10 +16,10 @@ new = malloc(sizeof(listint_t));
 if (!new || !head)
 return (NULL);
 new->n = n;
-new->news = NULL;
+new->next = NULL;
 if (idx == 0)
 {
-new->news = *head;
+new->next = *head;
 *head = new;
 return (new);
 }
@@ -27,12 +27,12 @@ for (i = 0; temp && i < idx; i++)
 {
 if (i == idx - 1)
 {
-new->news = temp->news;
-temp->news = new;
+new->next = temp->next;
+temp->next = new;
 return (new);
 }
 else
-temp = temp->news;
+temp = temp->next;
 }
 return (NULL);
 }

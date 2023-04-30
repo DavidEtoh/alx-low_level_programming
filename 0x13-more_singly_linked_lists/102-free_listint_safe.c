@@ -16,10 +16,10 @@ return (0);
 
 while (*h)
 {
-diff = *h - (*h)->news;
+diff = *h - (*h)->next;
 if (diff > 0)
 {
-temp = (*h)->news;
+temp = (*h)->next;
 free(*h);
 *h = temp;
 len++;

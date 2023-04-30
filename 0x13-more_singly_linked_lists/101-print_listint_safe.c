@@ -16,11 +16,11 @@ size_t looped_listint_len(const listint_t *head)
 const listint_t *turtle, *hare;
 size_t nodes = 1;
 
-if (head == NULL || head->news == NULL)
+if (head == NULL || head->next == NULL)
 return (0);
 
-turtle = head->news;
-hare = (head->news)->news;
+turtle = head->next;
+hare = (head->next)->next;
 
 while (hare)
 {
@@ -30,21 +30,21 @@ turtle = head;
 while (turtle != hare)
 {
 nodes++;
-turtle = turtle->news;
-hare = hare->news;
+turtle = turtle->next;
+hare = hare->next;
 }
 
-turtle = turtle->news;
+turtle = turtle->next;
 while (turtle != hare)
 {
 nodes++;
-turtle = turtle->news;
+turtle = turtle->next;
 }
 return (nodes);
 }
 
-turtle = turtle->news;
-hare = (hare->news)->news;
+turtle = turtle->next;
+hare = (hare->next)->next;
 }
 
 return (0);
@@ -66,7 +66,7 @@ if (nodes == 0)
 for (; head != NULL; nodes++)
 {
 printf("[%p] %d\n", (void *)head, head->n);
-head = head->news;
+head = head->next;
 }
 }
 
@@ -75,7 +75,7 @@ else
 for (index = 0; index < nodes; index++)
 {
 printf("[%p] %d\n", (void *)head, head->n);
-head = head->news;
+head = head->next;
 }
 
 printf("-> [%p] %d\n", (void *)head, head->n);

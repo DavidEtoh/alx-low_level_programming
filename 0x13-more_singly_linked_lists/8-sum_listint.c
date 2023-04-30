@@ -13,7 +13,7 @@ listint_t *temp = head;
 while (temp)
 {
 sum += temp->n;
-temp = temp->news;
+temp = temp->next;
 }
 
 return (sum);
